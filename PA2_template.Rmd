@@ -1,0 +1,19 @@
+```{r,echo=TRUE, message=FALSE}
+# Loading library
+library(ggplot2)
+library(dplyr)
+library(gridExtra)
+```
+# Title: Your document should have a title that briefly summarizes your data analysis
+
+## Sypnosis
+
+  - Across the United States, which types of events (as indicated in the EVTYPE variable) are most harmful with respect to population health?
+  - Across the United States, which types of events have the greatest economic consequences?
+
+## Data Processing
+```r echo=TRUE}
+load.noaa <- read.csv("repdata-data-StormData.csv.bz2")
+```
+
+## Results
