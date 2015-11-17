@@ -12,8 +12,12 @@ library(gridExtra)
   - Across the United States, which types of events have the greatest economic consequences?
 
 ## Data Processing
-```r echo=TRUE}
+```r echo=TRUE, cache=TRUE}
 load.noaa <- read.csv("repdata-data-StormData.csv.bz2")
+
+fatalities <- aggregate(data=load.noaa, FATALITIES ~EVTYPE, FUN=sum)
+
 ```
+- Event with highest number of fatalities: `r arrange(fatalities, desc(FATALITIES))[1,]` 
 
 ## Results
